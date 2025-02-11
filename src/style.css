@@ -1,0 +1,32 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+
+::-webkit-scrollbar-thumb {
+  background: #203e52; 
+  border-radius: 10px;
+  transition: background 0.3s;
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(13, 54, 82, 0.5)
+}
+
