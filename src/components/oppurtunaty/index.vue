@@ -1,7 +1,7 @@
 <template>
-    <section>
+    <section id="oppurtanity">
         <Container>
-            <div class="wrapper" id="oppurtanity">
+            <div class="wrapper" >
                 <div class="title">
                     <h1>Imkoniyatlar</h1>
                     <div class="text">

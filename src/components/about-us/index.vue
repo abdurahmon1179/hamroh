@@ -1,5 +1,5 @@
 <template>
-    <section   ref="aboutUsSection">
+    <section   id="aboutus">
         <Container>
             <div class="wrapper" >
                 <div class="content">

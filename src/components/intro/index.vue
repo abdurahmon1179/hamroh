@@ -78,6 +78,8 @@
     z-index: 100;
 }
 
+
+
 .nav {
     display: flex;
     align-items: center;
@@ -126,7 +128,7 @@
     position: absolute;
 }
 
-/* Chiziqlarning dastlabki holati */
+
 .burger span:nth-child(1) {
     top: 0;
 }
@@ -139,9 +141,9 @@
     top: 20px;
 }
 
-/* Burger ochilganda X hosil qilish */
+
 .burger.open span:nth-child(1) {
-    transform: rotate(50deg) translate(5px, 10px);
+    transform: rotate(50deg) translate(5px, 9px);
 }
 
 .burger.open span:nth-child(2) {
@@ -149,7 +151,7 @@
 }
 
 .burger.open span:nth-child(3) {
-    transform: rotate(-55deg) translate(5px, -11px);
+    transform: rotate(-55deg) translate(5px, -10px);
 }
 
 
@@ -171,12 +173,20 @@ li>a:hover {
 }
 
 .second {
+    position: relative;
     background-color: #f2f8d8;
     padding-top: 80px;
-    height: 100vh;
     overflow: hidden;
+    height: 100%;
+
+    margin: -20px auto;
+    /* background-color: red; */
 }
 
+.image-wrapper{
+    position: relative;
+    width: 1400px;
+}
 .women {
     position: absolute;
     top: 70px;
@@ -185,13 +195,13 @@ li>a:hover {
 .girl {
     position: absolute;
     top: 250px;
-    left: 15%;
+    left: 7%;
 }
 
 .women-2 {
     position: absolute;
     top: 500px;
-    left: 12%;
+    left: 5%;
 }
 
 .half-girl {
@@ -209,7 +219,7 @@ li>a:hover {
 .girl-flower {
     position: absolute;
     bottom: 300px;
-    right: 150px;
+    right: 50px;
 }
 
 .girl-comp {
@@ -265,7 +275,6 @@ button {
     .container {
         width: 100%;
         max-width: 992px;
-        padding: 0 15px;
     }
 
     .women {
@@ -276,18 +285,16 @@ button {
     .girl {
         width: 100px;
         height: 67px;
-        top: 200px;
-        left: 22%;
+        top: 27%;
     }
 
     .women-2 {
         width: 146px;
         height: 176px;
-        left: 15%;
     }
 
     .half-girl {
-        left: 30%;
+        left: 250px;
         width: 239px;
         height: 165px;
     }
@@ -295,18 +302,20 @@ button {
     .girl-comp {
         width: 147px;
         height: 167px;
-        bottom: 100px;
-
+        /* bottom: 100px; */
+        right: 100px;
     }
 
     .girl-flower {
-        width: 200px;
+        width: 170px;
         height: 162px;
+        right: 0;
     }
 
     .half-women {
         width: 300px;
         height: 243px;
+        top: -70px;
     }
 
     .text>h1 {
@@ -320,35 +329,20 @@ button {
         width: 250px;
         line-height: 140%;
     }
-
+    .image-wrapper{
+        width: 100%;
+    }
 
 }
 
-@media (max-width:1270px) {
-    .girl {
-        left: 18%;
-    }
 
-    .women-2 {
-        left: 12%;
-    }
 
-    .girl-flower {
-        right: 10%;
-    }
-}
 
-@media (max-width:1200px) {
-    .girl-flower {
-        width: 180px;
-        right: 9%;
-    }
-}
 
 @media (max-width:1120px) {
     .girl-flower {
         width: 170px;
-        right: 7%;
+        /* right: 7%; */
     }
 }
 
@@ -361,9 +355,7 @@ button {
         left: 7%;
     }
 
-    .girl-flower {
-        right: 5%;
-    }
+
 
     .half-girl {
         width: 210px;
@@ -418,7 +410,9 @@ button {
     }
 
     .women {
-        left: 60px;
+        width: 120px;
+        height: 150px;
+        left: 40px;
     }
 
     .women-2 {
@@ -427,20 +421,21 @@ button {
     }
 
     .girl {
-        left: 130px;
+        width: 80px;
+        height: 50px;
+        left: 120px;
     }
 
     .half-women {
         width: 230px;
         height: 186px;
-        top: 20px;
         right: 150px;
     }
 
     .girl-flower {
-        height: 144px;
-        top: 170px;
-        right: 50px;
+        height: 130px;
+        top: 150px;
+        /* right: 50px; */
     }
 
     .girl-comp {
@@ -455,9 +450,9 @@ button {
 
 @media (max-width:700px) {
     .girl-flower {
-        width: 177px;
+        width: 140px;
         height: 144px;
-        right: 40px;
+        top: 100px;
     }
 
     .women {
@@ -469,24 +464,30 @@ button {
         width: 72px;
         height: 48px;
         top: 150px;
+        left: 80px;
     }
 
     .half-women {
         width: 221px;
         height: 179px;
-        top: 0;
+        
     }
 
     .half-girl {
-        width: 200px;
+        width: 150px;
+    }
+    .girl-comp{
+        width: 130px;
+        height: 150px;
+        right: 0;
     }
 }
 @media (max-width:576px){
     .half-women{
         width: 116px;
         height: 94px;
-        top: 50px;
-        right: 60px;
+        top: 0;
+        right: 100px;
     }
     .girl-flower{
         width: 103px;
@@ -502,17 +503,18 @@ button {
     .women-2{
         width: 76px;
         height: 92px;
-        top: 600px;
     }
     .half-girl{
         width: 110px;
         height: 132px;
-        bottom: 50px;
+        bottom: 30px;
+        left: 150px;
         border-radius: 8px;
     }
     .girl-comp{
         width: 78px;
         height: 93px;
+        bottom: 100px;
     }
     .text > h1{
         width: 90%;

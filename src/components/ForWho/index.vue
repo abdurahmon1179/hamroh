@@ -1,7 +1,7 @@
 <template>
-    <section>
+    <section id="forwho">
         <Container>
-            <div class="wrapper" id="forwho">
+            <div class="wrapper" >
                 <div class="banner">
                     <div class="card-1 card">
                         <p>O‘z biznes rejasiga ega tadbirkorlar</p>
@@ -31,12 +31,6 @@
                 </div>
             </div>
         </Container>
-
-        <!-- id lar sectionga beriladi -->
-        <!-- intro rasmlar tugirlash -->
-        <!-- table rowlar tugirlash -->
-        <!-- burger menu tugirlash -->
-        <!-- intro height -->
     </section>
 </template>
 
@@ -125,23 +119,57 @@ section {
     }
 }
 @media (max-width:992px){
-    .banner > img{
+    .banner{
         width: 400px;
-        height: 400px;
+        height: 500px;
+        background-size: contain;
+        overflow-x: visible;
     }
+
     .wrapper{
         padding: 0 40px;
     }
     .text > h1{
         width: 400px;
-        font-size: 36px;
+        font-size: 32px;
     }
     .text > p{
         width: 400px;
         line-height: 140%;
+        font-size: 16px;
+    }
+    .card-4{
+        right: -50px;
+        top: 150px;
+    }
+    .card{
+        width: 109px;
+        height: 25px;
+        overflow: hidden; 
+        padding: 7px;  
+    }
+    .card-2{
+        width: 82px;
+    }
+    .card-3{
+        width: 100px;
+    }
+    .card-5{
+        width: 90px;
+        bottom: 100px;
+    }
+    .card-1{
+        width: 150px;
+    }
+    .card > p{
+        width: 200px;
+        font-size: 8px;
+    }
+    b{
+        display: none;
     }
 }
-@media (max-width:768px){
+@media (max-width:960px){
     .wrapper{
         flex-direction: column;
     }
