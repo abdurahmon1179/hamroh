@@ -188,7 +188,7 @@ section {
     .banner{
         width: 300px;
         height: 400px;
-        z-index: 200;
+
     }
 }
 @media (max-width:440px){

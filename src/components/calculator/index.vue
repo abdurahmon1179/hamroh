@@ -207,6 +207,9 @@ section {
     .last{
         margin-bottom: 100px;
     }
+    .title > h1{
+        display: none;
+    }
 }
 </style>
 

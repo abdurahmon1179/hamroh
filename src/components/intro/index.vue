@@ -7,11 +7,11 @@
                 </div>
                 <ul class="menu" :class="{ 'menu--open': isMenuOpen }">
                     <ul class="menu" :class="{ 'menu--open': isMenuOpen }">
-                        <li><a href="#aboutus" @click="scrollToAboutUs">Dastur haqida</a></li>
-                        <li><a href="#oppurtanity" @click="scrollToSection(oppurtanitySection)">Imkoniyatlar</a></li>
-                        <li><a href="#forwho" @click="scrollToSection(forWhoSection)">Ishtirokchilar</a></li>
-                        <li><a href="#steps" @click="scrollToSection(stepsSection)">Bosqichlar</a></li>
-                        <li><a href="#calculator" @click="scrollToSection(calculatorSection )">Kredit Kalkulyator</a></li>
+                        <li><a href="#aboutus" @click="closeMenu">Dastur haqida</a></li>
+    <li><a href="#oppurtanity" @click="closeMenu">Imkoniyatlar</a></li>
+    <li><a href="#forwho" @click="closeMenu">Ishtirokchilar</a></li>
+    <li><a href="#steps" @click="closeMenu">Bosqichlar</a></li>
+    <li><a href="#calculator" @click="closeMenu">Kredit Kalkulyator</a></li>
                     </ul>
                 </ul>
                 <div class="menu-2">
@@ -556,7 +556,9 @@ const scrollToSection = (sectionRef) => {
 };
 
 
-
+const closeMenu = () => {
+    isMenuOpen.value = false;
+};
 
 const toggleMenu = () => {
     isMenuOpen.value = !isMenuOpen.value;
