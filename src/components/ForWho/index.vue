@@ -182,6 +182,39 @@ section {
         font-size: 16px;
         width: 102%;
         text-align: center;
+    }   
+}
+@media (max-width:540px){
+    .banner{
+        width: 300px;
+        height: 400px;
+        z-index: 200;
+    }
+}
+@media (max-width:440px){
+    .banner{
+        width: 200px;
+        height: 300px;
+    }
+    .card-1{
+        left: 50px;
+    }
+    .card-2{
+        top: 80px;
+        left: -30px;
+    }
+    .card-3{
+        left: -50px;
+        top: 130px;
+    }
+    .card-4{
+        top: 120px;
+    }
+    .card-5{
+        right: 50px;
+    }
+    .card > p{
+        font-size:8px;
     }
 }
 </style>

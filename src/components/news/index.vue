@@ -138,7 +138,7 @@ h1 {
         flex-direction: column;
         gap: 50px;
         height: 100%;
-        padding: 20px;
+        padding: 0;
     }
     .card{
         width: 90%;

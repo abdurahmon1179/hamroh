@@ -70,7 +70,7 @@
                     <h1>{{ annualRate1 }}</h1>
                 </div>
 
-                <div class="counter">
+                <div class="counter last">
                     <p class="counter-p">
                         Boshlang'ich To'lov
                     </p>
@@ -189,8 +189,10 @@ section {
 @media (max-width:576px){
     .second-body{
         flex-direction: column;
+        gap: 50px;
     }
     .counter{
+        padding: 0px;
         width: 100%;
     }
     .first-body{
@@ -201,6 +203,9 @@ section {
     .first-body > button{
         width: 108px;
         height: 40px;
+    }
+    .last{
+        margin-bottom: 100px;
     }
 }
 </style>

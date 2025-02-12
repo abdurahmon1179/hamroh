@@ -143,7 +143,7 @@
 
 
 .burger.open span:nth-child(1) {
-    transform: rotate(50deg) translate(5px, 9px);
+    transform: rotate(50deg) translate(6px, 8px);
 }
 
 .burger.open span:nth-child(2) {
@@ -151,7 +151,7 @@
 }
 
 .burger.open span:nth-child(3) {
-    transform: rotate(-55deg) translate(5px, -10px);
+    transform: rotate(-55deg) translate(6px, -8px);
 }
 
 
@@ -540,22 +540,22 @@ button {
 <script setup>
 import { ref, onMounted } from "vue";
 import Container from "../layout/index.vue";
-import AboutUs from "../about-us/index.vue";
 
 
 const isMenuOpen = ref(false);
 const isSmallScreen = ref(false);
 
-const scrollToSection = (sectionId) => {
-    const section = document.getElementById(sectionId);
-    if (section) {
-        window.scrollTo({
-            top: section.offsetTop - 100, 
-            behavior: "smooth"
+const scrollToSection = (sectionRef) => {
+    if (sectionRef.value) {
+        sectionRef.value.scrollIntoView({
+            behavior: "smooth",
+            block: "start"
         });
         isMenuOpen.value = false; 
     }
 };
+
+
 
 
 const toggleMenu = () => {
@@ -571,17 +571,4 @@ onMounted(() => {
     window.addEventListener("resize", checkScreenSize);
 });
 
-const closeMenu = () => {
-    isMenuOpen.value = false;
-};
-
-
-
-const aboutUsSection = ref(null);
-
-const scrollToAboutUs = () => {
-  if (aboutUsSection.value) {
-    aboutUsSection.value.scrollIntoView({ behavior: 'smooth' });
-  }
-};
 </script>

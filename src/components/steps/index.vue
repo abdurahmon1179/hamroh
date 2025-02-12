@@ -125,6 +125,16 @@ section {
     }
 
 }
+@media (max-width:500px) {
+    .box > h1{
+        position: absolute;
+    }
+    .text-title{
+        padding-left: 50px;
+    }
+}
+
+
 @media (max-width:600px){
     .text-title > h2{
         font-size: 14px;
