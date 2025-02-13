@@ -3,7 +3,7 @@
         <Container>
             <div class="wrapper">
                 <div class="title">
-                <a href="">HAMROH</a>
+                <a href=""><img src="../../../public/img/logo.svg" alt=""></a>
             </div>
             <div class="menu">
                 <p><b> Murojaat uchun telefon raqam: </b> +998909290801</p>

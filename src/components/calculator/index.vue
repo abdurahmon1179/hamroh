@@ -94,7 +94,7 @@
 
 <style scoped>
 section {
-    font-family: Poppins;
+
     background-color: #000000;
     color: white;
     padding-top: 50px;

@@ -8,10 +8,10 @@
                 <ul class="menu" :class="{ 'menu--open': isMenuOpen }">
                     <ul class="menu" :class="{ 'menu--open': isMenuOpen }">
                         <li><a href="#aboutus" @click="closeMenu">Dastur haqida</a></li>
-    <li><a href="#oppurtanity" @click="closeMenu">Imkoniyatlar</a></li>
-    <li><a href="#forwho" @click="closeMenu">Ishtirokchilar</a></li>
-    <li><a href="#steps" @click="closeMenu">Bosqichlar</a></li>
-    <li><a href="#calculator" @click="closeMenu">Kredit Kalkulyator</a></li>
+                        <li><a href="#oppurtanity" @click="closeMenu">Imkoniyatlar</a></li>
+                        <li><a href="#forwho" @click="closeMenu">Ishtirokchilar</a></li>
+                        <li><a href="#steps" @click="closeMenu">Bosqichlar</a></li>
+                        <li><a href="#calculator" @click="closeMenu">Kredit Kalkulyator</a></li>
                     </ul>
                 </ul>
                 <div class="menu-2">
@@ -22,10 +22,12 @@
                     <li>Kredit kalkulyator</li>
 
                 </div>
-                <div class="login">
+                <div class="login" >
                     <p>Tizimga kirish</p>
                     <img src="../../../public/img/login.svg" alt="">
                 </div>
+
+
                 <div class="burger" :class="{ open: isMenuOpen }" @click="toggleMenu">
                     <span></span>
                     <span></span>
@@ -63,7 +65,7 @@
                 <img class="girl-comp" src="../../../public/img/girl-comp.svg" alt="">
             </div>
         </Container>
-    </section>  
+    </section>
 </template>
 
 <style scoped>
@@ -183,10 +185,11 @@ li>a:hover {
     /* background-color: red; */
 }
 
-.image-wrapper{
+.image-wrapper {
     position: relative;
     width: 1400px;
 }
+
 .women {
     position: absolute;
     top: 70px;
@@ -329,7 +332,8 @@ button {
         width: 250px;
         line-height: 140%;
     }
-    .image-wrapper{
+
+    .image-wrapper {
         width: 100%;
     }
 
@@ -470,68 +474,81 @@ button {
     .half-women {
         width: 221px;
         height: 179px;
-        
+
     }
 
     .half-girl {
         width: 150px;
     }
-    .girl-comp{
+
+    .girl-comp {
         width: 130px;
         height: 150px;
         right: 0;
     }
 }
-@media (max-width:576px){
-    .half-women{
+
+@media (max-width:576px) {
+    .half-women {
         width: 116px;
         height: 94px;
         top: 0;
         right: 100px;
     }
-    .girl-flower{
+
+    .girl-flower {
         width: 103px;
         height: 83px;
         right: 0;
     }
-    .women{
+
+    .women {
         left: 0;
     }
-    .girl{
+
+    .girl {
         left: 50px;
     }
-    .women-2{
+
+    .women-2 {
         width: 76px;
         height: 92px;
     }
-    .half-girl{
+
+    .half-girl {
         width: 110px;
         height: 132px;
         bottom: 30px;
         left: 150px;
         border-radius: 8px;
     }
-    .girl-comp{
+
+    .girl-comp {
         width: 78px;
         height: 93px;
         bottom: 100px;
     }
-    .text > h1{
+
+    .text>h1 {
         width: 90%;
     }
-    .text > p{
+
+    .text>p {
         font-size: 12px;
         width: 29%;
     }
 }
-@media (max-width:400px){
-    .text > h1{
+
+@media (max-width:400px) {
+    .text>h1 {
         font-size: 32px;
     }
-    .text > p{
+
+    .text>p {
         font-size: 10px;
     }
-    .nav{
+
+    .nav {
         padding: 0 20px;
     }
 }
@@ -542,19 +559,9 @@ import { ref, onMounted } from "vue";
 import Container from "../layout/index.vue";
 
 
+
 const isMenuOpen = ref(false);
 const isSmallScreen = ref(false);
-
-const scrollToSection = (sectionRef) => {
-    if (sectionRef.value) {
-        sectionRef.value.scrollIntoView({
-            behavior: "smooth",
-            block: "start"
-        });
-        isMenuOpen.value = false; 
-    }
-};
-
 
 const closeMenu = () => {
     isMenuOpen.value = false;
@@ -572,5 +579,6 @@ onMounted(() => {
     checkScreenSize();
     window.addEventListener("resize", checkScreenSize);
 });
+
 
 </script>

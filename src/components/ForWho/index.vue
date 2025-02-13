@@ -184,31 +184,33 @@ section {
         text-align: center;
     }   
 }
+
 @media (max-width:540px){
     .banner{
-        width: 300px;
-        height: 400px;
-
+        width:  300px;
+        overflow: visible;
+        height: 300px;
+        margin-bottom: 50px;
+    }
+    .card-5{
+        bottom: 0;
+    }
+    .card-3{
+        bottom: 70px;
+    }
+    .card-2{
+        top: 70px;
     }
 }
 @media (max-width:440px){
     .banner{
-        width: 200px;
-        height: 300px;
+        /* height: 300px; */
     }
     .card-1{
         left: 50px;
     }
-    .card-2{
-        top: 80px;
-        left: -30px;
-    }
-    .card-3{
-        left: -50px;
-        top: 130px;
-    }
     .card-4{
-        top: 120px;
+        right: -20px;
     }
     .card-5{
         right: 50px;

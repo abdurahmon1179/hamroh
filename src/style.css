@@ -6,7 +6,9 @@
   scroll-behavior: smooth;
 }
 
-
+body{
+  font-family: Helvetica, Arial;
+}
 ::-webkit-scrollbar {
   width: 10px;
   height: 10px;
