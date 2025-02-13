@@ -18,7 +18,7 @@
 <style scoped>
     .wrapper{
         display: flex;
-        padding: 70px 0 ;
+        padding: 70px 0px ;
         gap: 80px;
     }
     p{
@@ -51,8 +51,7 @@
     @media (max-width:1420px){
         .container{
             width: 100%;
-            max-width: 992px;
-            padding: 0 15px;
+            max-width: 992px
         }
         img{
             width: 400px;

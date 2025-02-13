@@ -184,8 +184,16 @@ section {
     }
     .counter{
         width: 40%;
+        padding:0;
+    }
+    .last{
+        margin-bottom:70px;
+    }
+    .title >h1{
+        display: none;
     }
 }
+
 @media (max-width:576px){
     .second-body{
         flex-direction: column;

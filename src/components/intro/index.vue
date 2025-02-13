@@ -5,14 +5,12 @@
                 <div class="logo">
                     <a href="#"><img src="../../../public/img/logo.svg" alt=""></a>
                 </div>
-                <ul class="menu" :class="{ 'menu--open': isMenuOpen }">
-                    <ul class="menu" :class="{ 'menu--open': isMenuOpen }">
-                        <li><a href="#aboutus" @click="closeMenu">Dastur haqida</a></li>
-                        <li><a href="#oppurtanity" @click="closeMenu">Imkoniyatlar</a></li>
-                        <li><a href="#forwho" @click="closeMenu">Ishtirokchilar</a></li>
-                        <li><a href="#steps" @click="closeMenu">Bosqichlar</a></li>
-                        <li><a href="#calculator" @click="closeMenu">Kredit Kalkulyator</a></li>
-                    </ul>
+                <ul class="menu" style="cursor: pointer;" :class="{ 'menu--open': isMenuOpen }">
+                    <li><a @click.prevent="scrollToSection('aboutus')">Dastur haqida</a></li>
+                    <li><a @click.prevent="scrollToSection('oppurtanity')">Imkoniyatlar</a></li>
+                    <li><a @click.prevent="scrollToSection('forwho')">Ishtirokchilar</a></li>
+                    <li><a @click.prevent="scrollToSection('steps')">Bosqichlar</a></li>
+                    <li><a @click.prevent="scrollToSection('calculator')">Kredit Kalkulyator</a></li>
                 </ul>
                 <div class="menu-2">
                     <li>Hamroh haqida</li>
@@ -22,11 +20,11 @@
                     <li>Kredit kalkulyator</li>
 
                 </div>
-                <div class="login" >
+
+                <div class="login">
                     <p>Tizimga kirish</p>
                     <img src="../../../public/img/login.svg" alt="">
                 </div>
-
 
                 <div class="burger" :class="{ open: isMenuOpen }" @click="toggleMenu">
                     <span></span>
@@ -67,6 +65,39 @@
         </Container>
     </section>
 </template>
+
+
+
+<script setup>
+import { ref, onMounted } from "vue";
+import Container from "../layout/index.vue";
+
+
+
+const isMenuOpen = ref(false);
+const isSmallScreen = ref(false);
+
+const closeMenu = () => {
+    isMenuOpen.value = false;
+};
+
+const scrollToSection = (id) => {
+    const section = document.getElementById(id);
+    if (section) {
+        section.scrollIntoView({ behavior: "smooth" });
+    }
+    closeMenu();
+};
+
+
+const toggleMenu = () => {
+    isMenuOpen.value = !isMenuOpen.value;
+};
+
+
+
+
+</script>
 
 <style scoped>
 .wrapper {
@@ -145,7 +176,7 @@
 
 
 .burger.open span:nth-child(1) {
-    transform: rotate(50deg) translate(6px, 8px);
+    transform: rotate(45deg) translate(7px, 7px);
 }
 
 .burger.open span:nth-child(2) {
@@ -153,10 +184,8 @@
 }
 
 .burger.open span:nth-child(3) {
-    transform: rotate(-55deg) translate(6px, -8px);
+    transform: rotate(-45deg) translate(7px, -7px);
 }
-
-
 
 
 li>a {
@@ -553,32 +582,3 @@ button {
     }
 }
 </style>
-
-<script setup>
-import { ref, onMounted } from "vue";
-import Container from "../layout/index.vue";
-
-
-
-const isMenuOpen = ref(false);
-const isSmallScreen = ref(false);
-
-const closeMenu = () => {
-    isMenuOpen.value = false;
-};
-
-const toggleMenu = () => {
-    isMenuOpen.value = !isMenuOpen.value;
-};
-
-const checkScreenSize = () => {
-    isSmallScreen.value = window.innerWidth <= 768;
-};
-
-onMounted(() => {
-    checkScreenSize();
-    window.addEventListener("resize", checkScreenSize);
-});
-
-
-</script>
